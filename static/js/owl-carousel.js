@@ -184,7 +184,7 @@
 	 * @public
 	 */
 	Owl.Defaults = {
-		items: 3,
+		items: 1,
 		loop: false,
 		center: false,
 		rewind: false,

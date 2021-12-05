@@ -31,77 +31,87 @@
 
     <section class="services">
         <div class="container">
-            {% for y in service %}
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="owl-service-item owl-carousel">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="owl-service-item owl-carousel">
+                        <div class="row">
 
                             <div class="item">
-                                <div class="icon">
-                                    <img src="/media/{{ y.icon }}" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h4>{{ y.heading }}</h4>
-                                    <p>{{ y.description }}</p>
-                                </div>
+                                {% for y in service %}
+                                    <div class="icon">
+                                        <img src="/media/{{ y.icon }}" alt="">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>{{ y.heading }}</h4>
+                                        <p>{{ y.description }}</p>
+                                    </div>
+                                {% endfor %}
                             </div>
 
                         </div>
+
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+
+            </div>
     </section>
 
     <section class="upcoming-meetings" id="meetings">
         <div class="container">
-            {% for z in upcoming %}
-                <div class="row">
+            <div class="row">
+
+                {% for z in heading %}
                     <div class="col-lg-12">
                         <div class="section-heading">
-                            <h2>Upcoming {{ z.heading }}</h2>
+                            <h2> {{ z.title }}</h2>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="categories">
-                            <h4>Meeting Catgories</h4>
-                            <ul>
-                                <li><a href="#">Sed tempus enim leo</a></li>
-                                <li><a href="#">Aenean molestie quis</a></li>
-                                <li><a href="#">Cras et metus vestibulum</a></li>
-                                <li><a href="#">Nam et condimentum</a></li>
-                                <li><a href="#">Phasellus nec sapien</a></li>
-                            </ul>
-                            <div class="main-button-red">
-                                <a href="{% url 'meeting-details' %}">All Upcoming Meetings</a>
-                            </div>
+                {% endfor %}
+
+                <div class="col-lg-4">
+                    <div class="categories">
+                        <h4>Meeting Catgories</h4>
+                        <ul>
+                            <li><a href="#">Sed tempus enim leo</a></li>
+                            <li><a href="#">Aenean molestie quis</a></li>
+                            <li><a href="#">Cras et metus vestibulum</a></li>
+                            <li><a href="#">Nam et condimentum</a></li>
+                            <li><a href="#">Phasellus nec sapien</a></li>
+                        </ul>
+                        <div class="main-button-red">
+                            <a href="#">All Upcoming Meetings</a>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="row">
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        {% for z in upcoming %}
                             <div class="col-lg-6">
                                 <div class="meeting-item">
                                     <div class="thumb">
                                         <div class="price">
                                             <span>${{ z.amount }}</span>
                                         </div>
-                                        <a href="meeting-details.html"><img src="/media/{{ z.image }}"
-                                                                            alt="New Lecturer Meeting"></a>
+                                        <a href="#"><img src="/media/{{ z.image }}"
+                                                         alt="New Lecturer Meeting"></a>
                                     </div>
                                     <div class="down-content">
                                         <div class="date">
-                                            <h6>Nov <span>10</span></h6>
+                                            <p><b> {{ z.date }} </b></p>
                                         </div>
-                                        <a href="meeting-details.html"><h4>{{ z.heading_tag }}</h4></a>
+                                        <a href="{% url  'meeting_app:meeting_details' pk=z.id %}"><h4>{{ z.title }}</h4></a>
                                         <p>{{ z.description }}</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
 
-            {% endfor %}
+            </div>
+
+
         </div>
     </section>
 
