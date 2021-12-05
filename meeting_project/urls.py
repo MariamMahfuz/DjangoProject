@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('meeting_app.urls')),
+    path('froala_editor/', include('froala_editor.urls'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()
