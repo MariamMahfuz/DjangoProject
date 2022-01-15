@@ -1,0 +1,470 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+
+<!-- ***** Main Banner Area Start ***** -->
+{% for x in cover %}
+<section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+        <source src="static/images/course-video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="caption">
+                        <h6>Hello {{ x.address }}</h6>
+                        <h2>Welcome to {{ x.place }}</h2>
+                        <p>{{ x.description }}</p>
+                        <div class="main-button-red">
+                            <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+<!-- ***** Main Banner Area End ***** -->
+
+<section class="services">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-service-item owl-carousel">
+                    <div class="row">
+
+                        <div class="item">
+                            {% for y in service %}
+                            <div class="icon">
+                                <img src="/media/{{ y.icon }}" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>{{ y.heading }}</h4>
+                                <p>{{ y.description }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+</section>
+
+<section class="upcoming-meetings" id="meetings">
+    <div class="container">
+        <div class="row">
+
+            {% for z in heading %}
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2> {{ z.title }}</h2>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="col-lg-4">
+                <div class="categories">
+                    <h4>Meeting Catgories</h4>
+                    <ul>
+                        <li><a href="#">Sed tempus enim leo</a></li>
+                        <li><a href="#">Aenean molestie quis</a></li>
+                        <li><a href="#">Cras et metus vestibulum</a></li>
+                        <li><a href="#">Nam et condimentum</a></li>
+                        <li><a href="#">Phasellus nec sapien</a></li>
+                    </ul>
+                    <div class="main-button-red">
+                        <a href="#">All Upcoming Meetings</a>
+                    </div>
+                </div>
+<<<<<<< HEAD
+                <div class="col-lg-8">
+                    <div class="row">
+                        {% for z in upcoming %}
+                            <div class="col-lg-6">
+                                <div class="meeting-item">
+                                    <div class="thumb">
+                                        <div class="price">
+                                            <span>${{ z.amount }}</span>
+                                        </div>
+                                        <a href="#"><img src="/media/{{ z.image }}"
+                                                         alt="New Lecturer Meeting"></a>
+                                    </div>
+                                    <div class="down-content">
+                                        <div class="date">
+                                            <p><b> {{ z.date }} </b></p>
+                                        </div>
+                                        <a href="{% url 'details_metting' pk=z.id %}"><h4>{{ z.title }}</h4></a>
+                                        <p>{{ z.description }}</p>
+                                    </div>
+=======
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    {% for x in upcoming %}
+                    <div class="col-lg-6">
+                        <div class="meeting-item">
+                            <div class="thumb">
+                                <div class="price">
+                                    <span>${{ x.amount }}</span>
+                                </div>
+                                <a href="#"><img src="/media/{{ x.image }}" alt="New Lecturer Meeting"></a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <p><b> {{ x.date }} </b></p>
+>>>>>>> 576376bb3d31eb534b0fa0b15fffc8d41787f914
+                                </div>
+                                <a href="{% url 'details_metting' pk=x.id %}">
+                                    <h4>{{ x.title }}</h4>
+                                </a>
+                                <p>{{ x.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+<section class="apply-now" id="apply">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are allowed to use this edu meeting CSS template for your school or university or
+                                business. You can feel free to modify or edit this layout.</p>
+                            <div class="main-button-red">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h3>APPLY FOR BACHELOR DEGREE</h3>
+                            <p>You are not allowed to redistribute the template ZIP file on any other template
+                                website.
+                                Please contact us for more information.</p>
+                            <div class="main-button-yellow">
+                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordions is-first-expanded">
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>About Edu Meeting HTML Template</span>
+                            <span class="icon">
+                                <i class="icon fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>If you want to get the latest collection of HTML CSS templates for your websites,
+                                    you
+                                    may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too
+                                        CSS
+                                        website</a>. If you need a working contact form script, please visit <a
+                                        href="https://templatemo.com/contact" target="_parent">our contact
+                                        page</a>
+                                    for more info.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>HTML CSS Bootstrap Layout</span>
+                            <span class="icon">
+                                <i class="icon fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna,
+                                    maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed
+                                    vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
+                                    Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget
+                                    nibh
+                                    consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus
+                                    ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus
+                                    sollicitudin
+                                    tincidunt.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="accordion-head">
+                            <span>Please tell your friends</span>
+                            <span class="icon">
+                                <i class="icon fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit,
+                                    at
+                                    ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur
+                                    velit.<br><br>
+                                    Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor
+                                    sapien et
+                                    quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="accordion last-accordion">
+                        <div class="accordion-head">
+                            <span>Share this to your colleagues</span>
+                            <span class="icon">
+                                <i class="icon fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et
+                                    malesuada fames ac ante ipsum primis in faucibus.<br><br>
+                                    Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla
+                                    pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi
+                                    quis,
+                                    convallis nisi.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-courses" id="courses">
+    <div class="container">
+        {% for m in course %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>{{ m.heading }}</h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="owl-courses-item owl-carousel">
+                    <div class="item">
+                        <img src="/media/{{ m.image }}" alt="Course One">
+                        <div class="down-content">
+                            <h4>{{ m.description }}</h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <span>${{ m.price }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="our-facts">
+    <div class="container">
+        {% for w in overview %}
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>A Few Facts About Our {{ w.head }}</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content percentage">
+                                    <div class="count-digit">{{ w.Success_percent }}</div>
+                                    <div class="count-title">{{ w.Succesed }}</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">{{ w.Mentor_number }}</div>
+                                    <div class="count-title">Current {{ w.Mentor }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="count-area-content new-students">
+                                    <div class="count-digit">{{ w.Member_Number }}</div>
+                                    <div class="count-title">New {{ w.Member }}</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="count-area-content">
+                                    <div class="count-digit">{{ w.Award_number }}</div>
+                                    <div class="count-title">Awards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img
+                            src="static/images/play-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<<<<<<< HEAD
+    <section class="contact-us" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 align-self-center">
+                    <div class="row">
+
+
+                        <!--mail submission part===============================================================-->
+
+                        <form action="{% url 'Contact' %}" method="POST" name="sentMessage" id="contactForm"
+                              novalidate="novalidate">
+                            {% csrf_token %}
+
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+                                       required="required" data-validation-required-message="Please enter your name"/>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="Your Email" required="required"
+                                       data-validation-required-message="Please enter your email"/>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                       placeholder="Subject" required="required"
+                                       data-validation-required-message="Please enter a subject"/>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" name="message" placeholder="Message"
+                                          required="required"
+                                          data-validation-required-message="Please enter your message">{{ message }}</textarea>
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div>
+
+                                <button type="submit" id="sendMessageButton">Send Message</button>
+
+                            </div>
+
+                        </form>
+                        <!--mail submission part ends here===============================================================-->
+
+=======
+<section class="contact-us" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 align-self-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>Let's get in touch</h2>
+                                </div>
+                                <div class="col-lg-4">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-4">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*"
+                                            placeholder="YOUR EMAIL..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-4">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
+                                            required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" type="text" class="form-control" id="message"
+                                            placeholder="YOUR MESSAGE..." required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW
+                                        </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+>>>>>>> 576376bb3d31eb534b0fa0b15fffc8d41787f914
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="right-info">
+                    <ul>
+                        <li>
+                            <h6>Phone Number</h6>
+                            <span>010-020-0340</span>
+                        </li>
+                        <li>
+                            <h6>Email Address</h6>
+                            <span>info@meeting.edu</span>
+                        </li>
+                        <li>
+                            <h6>Street Address</h6>
+                            <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                        </li>
+                        <li>
+                            <h6>Website URL</h6>
+                            <span>www.meeting.edu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

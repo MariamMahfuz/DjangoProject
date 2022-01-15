@@ -1,4 +1,4 @@
-#!c:\users\hp\desktop\education and meeting management system\meeting_project\env\scripts\python.exe
+#!c:\users\hp\downloads\compressed\meeting_project\env\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

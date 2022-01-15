@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\HP\Desktop\Education and Meeting Management System\meeting_project\env"
+VIRTUAL_ENV="C:\Users\HP\Downloads\Compressed\meeting_project\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

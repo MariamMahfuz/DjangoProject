@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\HP\Desktop\Education and Meeting Management System\meeting_project\env"
+$env:VIRTUAL_ENV="C:\Users\HP\Downloads\Compressed\meeting_project\env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
